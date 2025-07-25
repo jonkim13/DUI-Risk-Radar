@@ -1,0 +1,49 @@
+/* RouteComponent.css */
+
+/* Container for the entire component, including form and map */
+.route-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Keep everything top-aligned */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Form container */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px; /* Define a fixed width for the form */
+    margin-bottom: 20px; /* Space between the form and map */
+    z-index: 1; /* Ensure form sits above the map */
+  }
+  
+  /* Input styles */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make inputs span the full form width */
+    box-sizing: border-box;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

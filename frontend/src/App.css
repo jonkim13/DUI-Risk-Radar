@@ -1,0 +1,122 @@
+/* Basic reset and page styles */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: hsl(0, 0%, 12%);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: black;
+}
+
+header {
+  background-color: hsl(0, 0%, 12%);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container holding the content */
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1; /* Allow it to grow and fill the available space */
+  overflow: hidden;
+}
+
+/* Map container should flex-grow and take up the full space */
+.map-container {
+  display: flex;
+  flex: 1; /* This allows the map to grow and fill remaining space */
+  width: 100%;
+  height: 100%;
+}
+
+/* The actual map element itself should fill its container */
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Container to center the form and keep it on top */
+.form-container {
+  position: fixed;
+  left: 18%;
+  top: 12%;
+  transform: translate(-50%, -50%);
+  width: 100%;      
+  max-width: 350px; /* Slightly smaller max-width */
+  padding: 16px;    /* Reduced padding */
+  background-color: #f9f9f9;
+  border-radius: 10px; /* Smaller rounded corners */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  /* Reduced spacing between elements */
+  width: 100%;
+}
+
+/* Input styling */
+input[type="text"] {
+  padding: 8px;       /* Smaller padding */
+  font-size: 14px;    /* Smaller font size */
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Smaller rounded corners */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25); /* Smaller glow */
+  outline: none;
+}
+
+/* Button styling */
+button {
+  padding: 8px;       /* Smaller padding */
+  font-size: 14px;    /* Smaller font size */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px; /* Smaller rounded corners */
+  cursor: pointer;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px); /* Smaller lift effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
