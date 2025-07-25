@@ -4,6 +4,9 @@
 
 DUI Risk Heatmap is a web application designed to visualize DUI risk areas using a heatmap overlay on a Google Map. Users can report incidents, and the application tracks and displays high-risk zones based on user-generated data. The app leverages Google Maps API and Firebase for data storage and retrieval.
 
+## Video Demo
+https://youtu.be/j8vquDaPgc8 
+
 ## Features
 
 - **User-Friendly Map Interactions**
